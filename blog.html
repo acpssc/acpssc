@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Adamjee Cantonment Public School Science Club (ACPSSC)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="robot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Roboto Mono Light', monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            flex-grow: 1;
+            margin-top: 50px;
+        }
+
+        .blog-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .blog-header h1 {
+            font-family: Horizon, sans-serif;
+            font-weight: bold;
+            color: #00fffb;
+        }
+
+        .blog-entry {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+        }
+
+        .blog-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .blog-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-content {
+            flex: 2;
+        }
+
+        .blog-content h3 {
+            color: #00fbff;
+            font-weight: bold;
+        }
+
+        .blog-content p {
+            color: white;
+        }
+
+        .blog-content a {
+            color: #1e90ff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        /* Navbar styling */
+        nav.navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            padding: 5px 15px;
+            width: auto;
+            margin: 20px auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .nav > li > a {
+            color: white !important;
+            padding: 10px 20px;
+            line-height: 1;
+            font-family: 'Roboto Mono Light', monospace;
+            display: inline-block;
+        }
+
+        nav .nav > li {
+            margin-right: 10px;
+        }
+
+        /* Colorful icons */
+        nav .fa-home {
+            color: #ff4757;
+        }
+
+        nav .fa-book {
+            color: #ffa502;
+        }
+
+        nav .fa-tasks {
+            color: #1e90ff;
+        }
+
+        nav .fa-file-alt {
+            color: #2ed573;
+        }
+
+        nav .fa-users {
+            color: #3742fa;
+        }
+
+        nav .fa-briefcase {
+            color: #ff6348;
+        }
+
+        nav .fa-trophy {
+            color: #fbc531;
+        }
+
+        nav .fa-sign-in-alt {
+            color: #8e44ad;
+        }
+
+        /* Dropdown styling */
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dropdown-menu > li > a {
+            color: white !important;
+        }
+
+        /* Hover effect */
+        nav .nav > li > a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+        }
+
+        /* Blog Post Hover */
+        .blog-entry:hover {
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="history.html"><i class="fa fa-book"></i> Our History</a></li>
+                
+                <!-- Dropdown for Activities -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tasks"></i> Activities <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="announcements.html">Announcements</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown for Contents -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file-alt"></i> Contents <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contents.html">Research Papers & Segments</a></li>
+                        <li><a href="blog.html" class="active">Blog</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="team.html"><i class="fa fa-users"></i> Team & Projects</a></li>
+                <li><a href="executive.html"><i class="fa fa-briefcase"></i> Management Board</a></li>
+                <li><a href="olympiad.html"><i class="fa fa-trophy"></i> Olympiad</a></li>
+                <li><a href="joinus.html"><i class="fa fa-sign-in-alt"></i> Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Content -->
+    <div class="container">
+        <div class="blog-header">
+            <h1>Blogs</h1>
+            <p>Explore Insights, Articles & Stories From Our Representatives.</p>
+        </div>
+
+        <!-- Sample Blog Post 1 -->
+        <div class="blog-entry">
+            <div class="blog-image">
+                <img src="blog/1.jpg" alt="Solar Panels">
+            </div>
+            <div class="blog-content">
+                <h3>থিওরি অব এভরিথিং এর রহস্য উন্মোচনে</h3>
+                <p>By <strong>Safayetur Rahman</strong>, September 2024</p>
+                <p>তুমি কি চিন্তা করতে পারো, যদি একটি সমীকরণ দিয়ে মহাবিশ্বের রহস্য উন্মোচন করা যেতো? সমস্ত গ্রহ,উপগ্রহ এমনকি আমাদের চারপাশের ক্ষুদ্রতম কণাগুলোর আচরণও সেই সমীকরণ দিয়ে ব্যাখ্যা করা যেতো? <a href="post1.html">Read More</a></p>
+            </div>
+        </div>
+
+        <!-- Sample Blog Post 2 -->
+        <div class="blog-entry">
+            <div class="blog-image">
+                <img src="blog/2.jpg" alt="Breakthrough Technologies">
+            </div>
+            <div class="blog-content">
+                <h3>আমরা কি আদেও বর্তমান এ আছি?</h3>
+                <p>By <strong>Rafian Alam</strong>, August 2024</p>
+                <p>আমরা সময়কে তিন ভাগে ভাগ করি। যথা: অতীত, বর্তমান ও ভব্যিষৎ। আমরা নিজেদেরকে বর্তমান সময়ের বাসিন্দা বলেই পরিচয় দেই, কিন্তু আদেও কি আমরা বর্তমান এ আছি? <a href="post2.html">Read More</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ACPSSC. All rights reserved.</p>
+    </footer>
+
+    <!-- JS scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

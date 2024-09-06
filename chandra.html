@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities | Adamjee Cantonment Public School Science Club (ACPSSC)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="robot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="assets/logo1.png">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: 'Roboto Mono Light', monospace;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-family: Horizon, sans-serif;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-family: 'Roboto Mono Light', monospace;
+            color: white;
+        }
+
+        /* Custom Navbar Styling */
+        nav.navbar {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent-black */
+            border-radius: 50px;
+            padding: 5px 15px; /* Reduced padding for a narrower navbar */
+            width: auto; /* Auto width to fit only the content */
+            margin: 20px auto; /* Center the navbar */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            align-items: center; /* Center the items vertically */
+        }
+
+        nav .nav > li > a {
+            color: white !important;
+            padding: 10px 20px; /* Equal top and bottom padding */
+            line-height: 1; /* Fix extra spacing */
+            font-family: 'Roboto Mono Light', monospace;
+            display: inline-block; /* Ensure even padding and avoid extra space */
+        }
+
+        nav .nav > li {
+            margin-right: 10px; /* Space between the navbar items */
+        }
+
+        /* Make the icons colorful */
+        nav .fa-home {
+            color: #ff4757; /* Red */
+        }
+
+        nav .fa-book {
+            color: #ffa502; /* Orange */
+        }
+
+        nav .fa-tasks {
+            color: #1e90ff; /* Blue */
+        }
+
+        nav .fa-file-alt {
+            color: #2ed573; /* Green */
+        }
+
+        nav .fa-users {
+            color: #3742fa; /* Dark Blue */
+        }
+
+        nav .fa-briefcase {
+            color: #ff6348; /* Coral */
+        }
+
+        nav .fa-trophy {
+            color: #fbc531; /* Yellow */
+        }
+
+        nav .fa-sign-in-alt {
+            color: #8e44ad; /* Purple */
+        }
+
+        /* Dropdown styling */
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dropdown-menu > li > a {
+            color: white !important;
+        }
+
+        /* Adjust hover effect */
+        nav .nav > li > a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="navbar-header">
+			<div class="top-pad"></div>
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#"></a>	  
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		    <ul class="nav navbar-nav">
+				<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="history.html"><i class="fa fa-book"></i> Our History</a></li>
+				
+                <!-- Dropdown for Activities -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tasks"></i> Activities <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="announcements.html">Announcements</a></li>
+						<li><a href="activities.html">Activities</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+					</ul>
+				</li>
+
+				<!-- Dropdown for Contents -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file-alt"></i> Contents <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="contents.html">Research Papers & Segments</a></li>
+						<li><a href="blog.html">Blog</a></li>
+					</ul>
+				</li>
+
+				<li><a href="team.html"><i class="fa fa-users"></i> Team & Projects</a></li>
+				<li><a href="executive.html"><i class="fa fa-briefcase"></i> Management Board</a></li>
+				<li><a href="olympiad.html"><i class="fa fa-trophy"></i> Olympiad</a></li>
+				<li><a href="joinus.html"><i class="fa fa-sign-in-alt"></i> Join Us</a></li>
+		    </ul>
+		</div>
+	</nav>
+
+    <header>
+        <h1>Chandrasekhar Limit</h1>
+    </header>
+
+    <main>
+        <div class="gallery-container">
+            <img src="rs/chandra/1.jpg" alt="Chandrasekhar Limit Image 1">
+            <img src="rs/chandra/2.jpg" alt="Chandrasekhar Limit Image 2">
+            <img src="rs/chandra/3.jpg" alt="Chandrasekhar Limit Image 3">
+            <img src="rs/chandra/4.jpg" alt="Chandrasekhar Limit Image 4">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ACPSSC. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
